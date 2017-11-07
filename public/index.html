@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.js"
-      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-      crossorigin="anonymous">
-      </script>	
-       <script type="text/javascript" src="main.js"</script>
-</head>
-<body>
-  <form method="GET">
-  	<p>
-  		<label for="First_name">Nombre:</label>
-  		<input type="text" name="First_name" id=
-  		"First_name" required/>
-  	</p>
-  		
-  	<p>	
-  		<label for="">Apellidos:</label>
-  		<input type="text" name="last_name"/>
-  	</p>
-  	<p>
-  		<label for="">sexo:</label>
-  		<input type="radio" name="gender" value="f" id="femenino"><label for="femenino"> Femenino </label>
-  		<input type="radio" name="gender" value="m" id="masculino"><label for="masculino"> Masculino </label>
-  	</p>
+  <head>
+      <meta charset="utf-8">
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous">
+        </script>	
+         <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="main.css" type="text/css"/>
+  </head>
+  <body>
+    <form method="GET">
+    	<p>
+    		<label for="First_name">Nombre:</label>
+    		<input type="text" name="First_name" id=
+    		"First_name" required class="input-text">
+    	</p>
+    		
+    	<p>	
+    		<label for="">Apellidos:</label>
+    		<input type="text" name="last_name" id= "last_name" class="input-text">
+    	</p>
+    	<p>
+    		<label for="">sexo:</label>
+    		<input type="radio" name="gender" value="f" id="femenino"><label for="femenino"> Femenino </label>
+    		<input type="radio" name="gender" value="m" id="masculino"><label for="masculino"> Masculino </label>
+    	</p>
 
-  	<p>
-  		<label for="">Intereses:</label>
-  		<input type="checkbox" name="interest" value="tec"> Tecnologia
-  		<input type="checkbox" name="interest" value="sport"> Deportes
-  		<input type="checkbox" name="interest" value="dev"> Desarrollo
-  	</p>
-  		<input type="Submit" value="Registrar"/>
-  </form>
-</body>
+    	<p>
+    		<label for="">Intereses:</label>
+    		<input type="checkbox" name="interest" value="tec" id="tec"> Tecnologia
+    		<input type="checkbox" name="interest" value="sport" id="sport"> Deportes
+    		<input type="checkbox" name="interest" value="dev" id="dev"> Desarrollo
+    	</p>
+    		<input type="Submit" value="Registrar"/>
+    </form>
+  </body>
 </html>
