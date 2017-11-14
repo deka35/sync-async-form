@@ -11,9 +11,64 @@ $(document).ready (function (){
 	event.preventDefault();
 
 	var First_name = $('#First_name').val();
+	var last_name = $('#last_name').val();
+	var gender = $('input[name="gender"]:checked').val();
+	var interest = $('input[name="interest"]:checked');
+	var interests = new Array ();
+		
+	  for(var i=0;i<interest.length; i++) {
+	  	var temp_interest = interest[i];
+	  	interests.push(temp_interest.value);
+	  }
+
+	  var payload = {
+		'First_name':First_name , 
+		'last_name': last_name ,
+		'gender': gender,
+		'interests': interests
+			}
+			$.post("find.hmtl",payload);
+	});
+
+});	
+
+	/*var payload = {
+		'First_name':First_name , 
+		'last_name': last_name ,
+		'gender': gender,
+		'interest': interest.map(function(i ,element){
+			debugger
+			return $(element).val();
+
+		})
+	};
+
+	debugger
 	
-	$.post('find.html', {'First_name':First_name});
-	$.get('find.html', {'First_name':First_name});
+	$.post('find.html', payload);
+		   
+	$.get('find.html', payload);
+
+	/*var last_name = $('#last_name').val();
+	
+	$.post('find.html', {'last_name':last_name});
+	$.get('find.html', {'last_name':last_name});
+
+	var gender = $('input[name="gender"]:checked').val();
+	
+	$.post('find.html', {'gender':gender});
+	$.get('find.html', {'gender':gender});
+
+	var interest = $('input[name="interest"]:checked').val();
+	
+	$.post('find.html', {'interest':interest});
+	$.get('find.html', {'interest':interest});
+	
+	
+
+
+
+
 
 	/*$.ajax('find.html', {
 		method: 'post',
@@ -26,6 +81,3 @@ $(document).ready (function (){
 	console.log('Hiciste click' , $('#last_name').val());
 	console.log('Hiciste click' , $('input[name="gender"]:checked').val());
 	console.log('Hiciste click' , $('input[name="interest"]:checked').val());*/
-});
-
-});
