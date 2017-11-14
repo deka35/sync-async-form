@@ -10,7 +10,7 @@ $(document).ready (function (){
 
 	event.preventDefault();
 
-	var First_name = $('#First_name').val();
+	var first_name = $('#first_name').val();
 	var last_name = $('#last_name').val();
 	var gender = $('input[name="gender"]:checked').val();
 	var interest = $('input[name="interest"]:checked');
@@ -22,12 +22,13 @@ $(document).ready (function (){
 	  }
 
 	  var payload = {
-		'First_name':First_name , 
+		'first_name':first_name , 
 		'last_name': last_name ,
 		'gender': gender,
 		'interests': interests
 			}
-			$.post("find.hmtl",payload);
+			$.post("/find",payload);
+			$.get("/find",payload);
 	});
 
 });	
